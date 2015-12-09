@@ -1,5 +1,11 @@
 app = angular.module('drivoApp', ['ngRoute']);
 
+deviceId = "";
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    deviceId = device.uuid;
+};
+
 app.config(function($routeProvider) {
     $routeProvider.when("/", {
         templateUrl: "home.html",
@@ -29,15 +35,16 @@ app.config(function($routeProvider) {
 });// /all orders route
 
 app.controller("homeCtrl", function($scope, $http){
-    $http.get("http://192.168.1.20:1202/getDriverOrders")
+    $http.get("http://192.168.1.20:1202/getDriverOrders?deviceId="+deviceId)
         .success(function(orders){
-        $scope.title    = "My Delivery List";
+//        $scope.title    = "My Delivery List";
+        $scope.title    = deviceId;
         $scope.orders   = orders;
     });// /get orders
 });// homeCtrl
 
 app.controller("allOrdersCtrl", function($scope, $http){
-    $http.get("http://192.168.1.20:1202/getDriverOrders")
+    $http.get("http://192.168.1.20:1202/getDriverOrders?deviceId="+deviceId)
         .success(function(orders){
         $scope.title    = "My All Delivery List";
         $scope.orders   = orders;
