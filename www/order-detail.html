@@ -1,0 +1,77 @@
+<div ng-controler="orderDetailCtrl">
+    <div class="cotent ">
+        <div class="text-center title"><h4>{{title}}</h4></div>
+        <section class="left-small" title="Back">
+            <a class="back-icon" ng-href="#/"><span><i class="fa fa-long-arrow-left"></i></span></a>
+        </section>
+        <div class="stat"><span>
+            <i ng-if="orderDetail.order.status==0" class="fa fa-clock-o gray"></i>
+            <i ng-if="orderDetail.order.status==1" class="fa fa-check green"></i>
+            <i ng-if="orderDetail.order.status==2" class="fa fa-times red"></i>
+            </span></div>
+        <div class="row">
+            <!--                        <iframe src="https://www.google.com/maps/place/n32db&output=embed" width="100%" height="300" frameborder="0" style="border:0;height:200px!important;"></iframe>-->
+            <table class="orderDetail">
+                <tr>
+                    <td><span>Name</span></td>
+                    <td>{{orderDetail.client.name}} {{orderDetail.client.lname}}</td>
+                </tr>
+                <tr>
+                    <td><span>Tel</span></td>
+                    <td>{{orderDetail.client.cell}}</td>
+                </tr>
+                <tr>
+                    <td><span>Delivery Time</span></td>
+                    <td>{{orderDetail.order.deliveryTime}}</td>
+                </tr>
+
+                <tr>
+                    <td><span>Postalcode</span></td>
+                    <td>{{orderDetail.order.deliveryAddress.postalCode}}</td>
+                </tr>
+                <tr>
+                    <td><span>Address</span></td>
+                    <td>{{orderDetail.order.deliveryAddress.premise}}, {{orderDetail.order.deliveryAddress.address2}},{{orderDetail.order.deliveryAddress.address1}}, {{orderDetail.order.deliveryAddress.county}}</td>
+                </tr>
+                <tr>
+                    <td><span>Note</span></td>
+                    <td>{{orderDetail.order.note}}</td>
+                </tr>
+                <tr>
+                    <td><span>Payment Type</span></td>
+                    <td>{{orderDetail.order.paymentType}}</td>
+                </tr>
+                <tr>
+                    <td><span>Amount</span></td>
+                    <td>&pound; {{orderDetail.order.amount|number}}</td>
+                </tr>
+            </table>  
+            <div class="small-6 columns">  
+                <button class="success button" ng-click="changeOrderStat(orderDetail.order._id, 1)" style="width:100%">
+                Deliver</button>
+            </div>
+            <div class="small-6 columns">
+                <button type="button" type="button" class="alert button" ng-click="changeOrderStat(orderDetail.order._id, 2)" style="width:100%">Cancel</button>
+            </div>
+<!--
+            <div class="small-4 columns">
+                <button class="button" type="button">Note</button>
+            </div>
+            
+-->
+        </div>
+        <div class="row">
+            <div class="small-12">
+                <button type="button" class="expanded button" style="background-color:#ccc;color:#333;width:100%;">This Order Items</button>
+            </div>
+            <div>
+                <table class="orderDetail">
+                    <tr ng-repeat="order in orderDetail.order.basket" >
+                        <td><span>{{order.name}}</span></td>
+                        <td>{{order.count}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,204 @@
+body {
+    background: #fff;
+    
+}
+
+.clear{clear: both;}
+
+
+.title h4{
+    color:#fff;
+}
+.green-text{
+    color:#43AC6A;
+}
+.red-text{
+    color:#f04124;
+}
+
+/******************
+********LIST*******
+******************/
+.list {
+background: #fff;
+}
+.list .columns{
+    padding: 1ren;
+    background: #fff;
+}
+.list a{
+    color:#333!important;
+}
+.first{padding-top: 1rem;}
+/*------LOGIN-----*/
+#login{padding-top:5rem;}
+#login input[type="text"],#login input[type="password"]{
+    border:0;
+    border-bottom: solid 2px #0f76a1;
+    background: transparent;color:#fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+}
+#login .button{margin-top:2rem;}
+/****MENU*****/
+.right-off-canvas-toggle{background: #3298c0;border-radius: 50%;}
+.tab-bar {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0);
+    background: #0F78A5;
+    padding: 2rem 0;
+}
+.move-left .exit-off-canvas{
+ background: #1D9CD2;
+}
+
+.tab-bar .menu-icon span::after{
+      box-shadow: 0 0 0 1px #0F78A5, 0 7px 0 1px #0F78A5, 0 14px 0 1px #0F78A5;
+}
+.left-small{
+    border: 0;
+}
+.back-icon .fa{
+    color:#fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.stat{
+    position: absolute;
+    font-size: 1.5rem;
+    top:0;
+    right: 0;
+    padding: 0.7rem;
+}
+.stat .green{
+    
+    color: #00F55A;
+}
+.stat .red{
+    
+    color: #FF5D5D;
+}
+.stat .gray{
+    
+    color: #BFBFBF;
+}
+.right-small{
+    border-left: 0;
+}
+ul.off-canvas-list li a{
+    color:#fff;
+    border-bottom: 1px solid #168ABB;
+}
+ul.off-canvas-list li a:hover {
+    background: #008CBA;
+    color:#fff;
+}
+ul.off-canvas-list li a .fa{
+    padding:0 10px;
+}
+.right-off-canvas-menu{
+    background: #0F78A5;
+}
+.move-left .exit-off-canvas{
+    box-shadow:-4px 0 4px rgba(0, 0, 0, 0), 4px 0 4px rgba(0, 0, 0, 0);
+}
+.right-off-canvas-menu{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+}
+.center{margin: 0 auto;}
+/****MAIN-SECTION****/
+.off-canvas-wrap .main-section{
+    border-right: 1px solid #e6e6e6;
+}
+/*****INSERT******/
+.large-12 .switch p{
+    padding:0 5px;
+}
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.inputReset{border:0;background: transparent;  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.);}
+.top-title{
+    background: #fafafa;
+    padding: 10px ;
+    margin: 0;
+}
+/*******************
+*******DETAIL******
+*******************/
+.orderDetail{
+   border: 0;
+    width: 100%!important;
+}
+.orderDetail tr {
+    background: #ebebeb
+}
+.orderDetail span{
+    color:#565656;
+}
+
+table thead tr th, table thead tr td{
+font-size: 0.8rem;
+
+}
+table tr th, table tr td{
+    font-size: 0.9rem;
+}
+
+.item{padding-top: 2rem;}
+.item .item-title{background: #008CBA;color:#fff;}
+.item .item-title p{margin: 0;padding: 0.5em;}
+.item-content {height: 29em;overflow-y: scroll;border:solid 1px #45B5E4;border-top:0;}
+.item-calculator{border:solid 1px #45B5E4;border-top:0;padding: 5px;background: #008CBA}
+.item-calculator p{margin: 0;font-size: 0.8rem;}
+.proceedings {border: 0;}
+.row{max-width: 80rem;}
+.alert-box .close {left: 0.25rem!important;}
+.failure-list {padding:2em 0em }
+.failure-list .title p{margin: 0;color:#fff;padding: 0.5em;}
+.failure-list .title {border-bottom: 1px dotted #45B5E4;margin-bottom: 1em;  padding-bottom: 4em;}
+
+.title{box-shadow: 0 2px 2px rgba(0, 0, 0, 0);
+    background: #0F78A5;
+    padding: 0.5rem 0;}
+.title h3{
+    color: #fff;
+    
+}
+.icon-bar{
+position: fixed;
+    bottom: 0;
+    z-index: 10;
+    display: block;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0);
+    background: #0F78A5;
+}
+.icon-bar.five-up .item {
+    width: 100%!important;
+}
+.icon-bar > *{width: 50%;}
+.icon-bar>* {
+    padding: 0.4rem!important;
+}
+.icon-bar>* i {
+    font-size: 1.4rem!important;
+}
+.icon-bar>* i+label, .icon-bar>* img+label {
+    font-size: 0.7rem!important;
+}
+.footer{
+    padding-top: 100px;
+}

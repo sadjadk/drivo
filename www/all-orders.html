@@ -1,0 +1,13 @@
+<div ng-controler="allOrdersCtrl">
+    <div class="cotent ">
+        <div class="text-center title"><h4>{{title}}</h4></div>
+        <div class="row list" ng-class="{'first':$first}" ng-repeat="order in orders">
+            <a ng-href="#/order-detail?id=order._id">
+                 <div class="small-4 columns text-center" >{{order.deliveryAddress.postalCode}}</div>
+                <div class="small-7 columns text-center" ><span ng-bind="order.orderDate | date:'MM/dd/yyyy'"></span> - {{order.deliveryTime}}</div>
+                <div class="small-1 columns"><h3><i class="fa fa-angle-right"></i></h3></div>
+                <hr>
+            </a>
+        </div>
+    </div>
+</div>
